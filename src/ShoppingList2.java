@@ -73,14 +73,7 @@ for (int i = 0; i < cartItem.size(); i++) {
     System.out.println("The total of your bill is: $" + totalPrices + ", $" + tax + " with tax.");
     
   
-    double averagePrice = 0.0;
-    for (int x = 0;  x < cartPrice.size(); x++){
-
-        averagePrice = totalPrices/cartPrice.size();
-        
-    }
-        
-	System.out.println("Your average item cost is: $" +  averagePrice);
+    getSums(cartPrice, totalPrices);
 	
 	getHighestPrice(cartPrice);
    
@@ -89,6 +82,17 @@ for (int i = 0; i < cartItem.size(); i++) {
   System.out.println("Thank you for shopping at the Java Market!");
 		
 
+	}
+
+	private static void getSums(ArrayList<Double> cartPrice, double totalPrices) {
+		double averagePrice = 0.0;
+		for (int x = 0;  x < cartPrice.size(); x++){
+
+		    averagePrice = totalPrices/cartPrice.size();
+		    
+		}
+		    
+		System.out.println("Your average item cost is: $" +  averagePrice);
 	}
 
 	private static void getHighestPrice(ArrayList<Double> cartPrice) {
