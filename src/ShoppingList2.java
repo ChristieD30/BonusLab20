@@ -82,15 +82,24 @@ for (int i = 0; i < cartItem.size(); i++) {
         
 	System.out.println("Your average item cost is: $" +  averagePrice);
 	
-	Double highestPrice = Collections.max(cartPrice);
-   System.out.println("The highest priced item is: $" + highestPrice );
+	getHighestPrice(cartPrice);
    
-   Double lowestPrice = Collections.min(cartPrice);
-   System.out.println("The lowest priced item is $" + lowestPrice);
+   getMinimumPrice(cartPrice);
    
   System.out.println("Thank you for shopping at the Java Market!");
 		
 
+	}
+
+	private static void getHighestPrice(ArrayList<Double> cartPrice) {
+		Double highestPrice = Collections.max(cartPrice);
+   System.out.println("The highest priced item is: $" + highestPrice );
+	}
+
+	private static void getMinimumPrice(ArrayList<Double> cartPrice) {
+		Double lowestPrice = Collections.min(cartPrice);
+		
+		   System.out.println("The lowest priced item is $" + lowestPrice);
 	}
 
 	public static String getString(Scanner scan, String prompt) {
